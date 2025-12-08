@@ -62,6 +62,6 @@ public class Scenario2_Steps {
 
 	@Then("I close the browser window")
 	public void i_close_the_browser_window() {
-	    search.close();
+//	    search.close();
 	}
 }

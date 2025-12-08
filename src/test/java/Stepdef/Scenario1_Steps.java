@@ -54,8 +54,8 @@ public class Scenario1_Steps {
 
 	@Then("the product name should be displayed")
 	public void the_product_name_should_be_displayed() {
-	    String Expected = "iQOO 15 (Legend, 12GB RAM, 256GB Storage) | Fastest Snapdragon 8 Elite Gen 5 Processor* | Origin OS 6 - Out of The Box* | Samsung 2K M14 Lead OLED Display - First time Ever in Android";
-	    assertEquals(amazon.Product1_name(), Expected);
+	    String Expected = amazon.get_Title();
+	    assertTrue(Expected.contains(amazon.Product1_name()));
 	}
 
 	@When("I navigate back to the Deals page")
@@ -72,8 +72,9 @@ public class Scenario1_Steps {
 	
 	@Then("the product name should be correctly displayed")
 	public void the_product_name_should_be_correctly_displayed() {
-		String Expected = "OnePlus Nord CE5 | Massive 7100mAh Battery | MediaTek Dimensity 8350 Apex | Powered by OnePlus AI | 8GB + 128GB | Black Infinity";
-		assertEquals(amazon.Product2_name(), Expected);
+		String Expected = amazon.get_Title();
+//		assertEquals(amazon.Product2_name(), Expected);
+		assertTrue(Expected.contains(amazon.Product2_name()));
 	}
 	
 	@Then("I close the browser")

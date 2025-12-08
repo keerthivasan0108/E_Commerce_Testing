@@ -36,7 +36,7 @@ public class Amazon {
 	}
 	
 	public String Product1_name() {
-		return dr.findElement(By.id("productTitle")).getText();
+		return dr.findElement(By.xpath("//span[@id=\"productTitle\"]")).getText();
 	}
 	
 	public void navigate_back() {
@@ -49,7 +49,11 @@ public class Amazon {
 	}
 	
 	public String Product2_name() {
-		return dr.findElement(By.id("productTitle")).getText();
+		return dr.findElement(By.xpath("//span[@id=\"productTitle\"]")).getText();
+	}
+	
+	public String get_Title() {
+		return dr.getTitle();
 	}
 	
 	public void close() {
