@@ -15,21 +15,23 @@ public class Scenario1_Steps {
 	WebDriver dr;
 	util u;
 	Amazon amazon;
-	
+
 	@io.cucumber.java.Before
 	public void Before() {
 		u = new util();
 		
 	}
-	
+
 	@Given("the browser and Amazon URL is launched")
 	public void the_browser_is_launched() {
-		dr = u.chrome_launch("https://amazon.in");
+		
+		dr = u.Edge_launch("https://amazon.in");
+		amazon = new Amazon(dr);
 	}
 	
 	@Then("the page title and URL should be correct")
 	public void the_page_title_and_url_should_be_correct() {
-	    amazon = new Amazon(dr);
+	    
 	    assertEquals(amazon.getTitle(), "Online Shopping site in India: Shop Online for Mobiles, Books, Watches, Shoes and More - Amazon.in");
 	    assertEquals(amazon.getURL(), "https://www.amazon.in/");
 	}

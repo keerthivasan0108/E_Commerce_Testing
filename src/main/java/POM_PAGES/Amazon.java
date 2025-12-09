@@ -3,12 +3,14 @@ package POM_PAGES;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
+import Utility.util;
+
 public class Amazon {
 	
-	static WebDriver dr;
+	WebDriver dr;
 	
 	public Amazon(WebDriver dr) {
-		Amazon.dr = dr;
+		this.dr = util.dr;
 	}
 	
 	public String getTitle() {
@@ -30,7 +32,9 @@ public class Amazon {
 	}
 	
 	public void Click_First_Item() {
-		String xpath = "//div[contains(@class,\"DesktopDiscountAsinGrid-module__grid_\")]/div/div/div[2]/div[1]/div/div/div[1]/div[2]/div[1]/a";
+//		String xpath = "//div[contains(@class,\"DesktopDiscountAsinGrid-module__grid_\")]/div/div/div[2]/div[1]/div/div/div[1]/div[2]/div[1]/a";
+//		String xpath = "//*[@id=\"title-B0FYGBSKFB\"]/span/span/span[2]";
+		String xpath = "//div[@data-testid='virtuoso-item-list']//div[@class='GridRow-module__container_q6XsDi4clqdE6jhYFSBW']//div[@data-test-index='0']";
 		dr.findElement(By.xpath(xpath)).click();
 		
 	}
@@ -44,7 +48,9 @@ public class Amazon {
 	}
 	
 	public void Click_Second_Item() {
-		String xpath = "//div[contains(@class,\"DesktopDiscountAsinGrid-module__grid_\")]/div/div/div[2]/div[1]/div/div/div[2]/div[2]/div[1]/a";
+//		String xpath = "//div[contains(@class,\"DesktopDiscountAsinGrid-module__grid_\")]/div/div/div[2]/div[1]/div/div/div[2]/div[2]/div[1]/a";
+//		String xpath = "//*[@id=\"title-B0FCMMJ3TC\"]/span/span/span[2]";
+		String xpath = "//div[@data-testid='virtuoso-item-list']//div[@class='GridRow-module__container_q6XsDi4clqdE6jhYFSBW']//div[@data-test-index='1']";
 		dr.findElement(By.xpath(xpath)).click();
 	}
 	

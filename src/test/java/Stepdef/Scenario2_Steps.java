@@ -12,7 +12,7 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
 public class Scenario2_Steps {
-	static WebDriver dr;
+	WebDriver dr;
 	util u;
 	static Amazon_Search search;
 	
@@ -22,9 +22,11 @@ public class Scenario2_Steps {
 		
 	}
 	
+	
 	@Given("the Amazon URL Should opened")
 	public void the_amazon_url_is_opened() {
-	    dr = u.chrome_launch("https://amazon.in");
+		
+	    dr = u.Edge_launch("https://amazon.in");	    
 	    search = new Amazon_Search(dr);
 	}
 
@@ -62,6 +64,6 @@ public class Scenario2_Steps {
 
 	@Then("I close the browser window")
 	public void i_close_the_browser_window() {
-//	    search.close();
+	    search.close();
 	}
 }
