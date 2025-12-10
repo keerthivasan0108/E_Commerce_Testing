@@ -41,22 +41,33 @@ public class Scenario2_Steps {
 		
 		if(item.equals("Watches")) {
 			search.watch_link();
+		    
+		    String expected = search.get_Watch_Title();
 		    String actual = search.get_Title();
-//		    String expected = search.get_Watch_Title();
-//		    assertEquals(actual, expected);
+		    System.out.println(actual);
+		    System.out.println(expected);
+		    assertTrue(actual.contains(expected));
 		    
 		}
 		else if(item.equals("Shoes")){
 			search.shoe_link();
+			
+			String expected = search.get_Shoe_Title();
 			String actual = search.get_Title();
-//			String expected = search.get_Shoe_Title();
+			System.out.println(actual);
+		    System.out.println(expected);
 //		    assertEquals(actual, expected);
+			assertTrue(actual.contains(expected));
 		}
 		else {
 			search.laptop_link();
+			
+			String expected = search.get_Laptop_Title();
 			String actual = search.get_Title();
-//			String expected = search.get_Laptop_Title();
+			System.out.println(actual);
+		    System.out.println(expected);
 //		    assertEquals(actual, expected);
+			assertTrue(actual.contains(expected));
 		}
 			
 		
