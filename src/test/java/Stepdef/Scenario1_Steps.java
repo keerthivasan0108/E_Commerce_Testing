@@ -11,21 +11,19 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
-public class Scenario1_Steps {
-	WebDriver dr;
+public class Scenario1_Steps extends util{
+//	WebDriver dr;
 	util u;
 	Amazon amazon;
 
-	@io.cucumber.java.Before
-	public void Before() {
-		u = new util();
-		
-	}
+//	@io.cucumber.java.Before
+//	public void Before() {
+//		u = new util();
+//		
+//	}
 
 	@Given("the browser and Amazon URL is launched")
 	public void the_browser_is_launched() {
-		
-		dr = u.Edge_launch("https://amazon.in");
 		amazon = new Amazon(dr);
 	}
 	
@@ -81,7 +79,7 @@ public class Scenario1_Steps {
 	
 	@Then("I close the browser")
 	public void I_close_the_browser() {
-		amazon.close();
+		System.out.println("The Browser is Closed..");
 	}
 	
 }

@@ -8,11 +8,15 @@ import org.openqa.selenium.edge.EdgeDriver;
 public class util {
 	public static WebDriver dr;
 	
-	public WebDriver Edge_launch(String url) {
+	public void Edge_launch(String url) {
 		dr = new ChromeDriver();
 		dr.manage().window().maximize();
 		dr.get(url);
 		
-		return dr;
+		
+	}
+	
+	public void close() {
+		dr.quit();
 	}
 }

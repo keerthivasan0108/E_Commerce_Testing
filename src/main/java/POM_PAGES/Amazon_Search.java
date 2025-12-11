@@ -88,8 +88,8 @@ public class Amazon_Search {
 		return dr.getTitle();
 	}
 	
-	public void close() {
-		dr.quit();
-	}
+//	public void close() {
+//		dr.quit();
+//	}
 	
 }

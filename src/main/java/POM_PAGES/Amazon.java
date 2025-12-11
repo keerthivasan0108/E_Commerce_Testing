@@ -62,8 +62,5 @@ public class Amazon {
 		return dr.getTitle();
 	}
 	
-	public void close() {
-		dr.close();
-	}
 	
 }
